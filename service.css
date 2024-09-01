@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Poppins" sans-serif !important;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    transition: all .2s linear;/*je peux utiliser pour les hovers des éléments du menu*/
+}
+h1, h2, h3, h4, h5, h6, p, a, button {
+    font-family: 'Poppins', sans-serif !important;
+}
+h2{
+    font-size: 32px;
+}
+
+/*debut menu de la page*/
+
+/* le style pour les éléments du header*/
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5%;
+    background: #000;
+}
+
+/*pour redimensionner l'image*/
+.header .logo img{
+    width:60px;
+    height: 60px;
+}
+/*pour cacher le navbar lorsqu'on clique sur l'icone de recherche*/
+/* .header .navbar.none{
+    display: none;
+} */
+/* pour les liens du nav*/
+.header .navbar a {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0 0.5rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*hover lorsqu'on clique sur les liens*/
+.header .navbar a:hover{
+    color: #f6f649;
+}
+.header .navbar a.clicked{
+    color: #f6f649;
+}
+
+/*les points qui sont à côté des liens*/
+.header .navbar a strong{
+    margin-left: 5px;
+    font-size: 2rem;
+    color: #f6f649;
+}
+
+/*les icones */
+.header .icons div {
+    /* height: 2rem;
+    width: 2rem; */
+    line-height: 4.5rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+/* le hover des icones */
+.header .icons div:hover {
+    color: #f6f649;
+}
+/*le menu de responsive*/
+#menu-btn {
+    display: none;
+}
+/*pour activer le formulaire de recherche*/
+.header .search-form.active{
+    top: 20%;
+    transition: .4s linear;
+
+}
+/*les caractéristiques du formulaire de recherche*/
+.header .search-form{
+    position: absolute;
+    right:18%; 
+    top: -110%;
+    width: 70%;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    background-color: #000;
+}
+/* pour supprimer les éléments du champs*/
+input[type="search"]::-webkit-clear-button,
+input[type="search"]::-ms-clear,
+input[type="search"]::-ms-reveal {
+
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* pour le champ*/
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.5rem;
+    color: #fff;
+    padding:0 1.5rem;
+}
+/*pour le label du formulaire*/
+.header .search-form label{
+    font-size: 2.2rem;
+    padding: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+/*pour le hover du label*/
+.header .search-form label:hover{
+    /* background-color: #000; */
+    color:#f6f649;
+}
+
+/*style pour le formulaire de connexion*/
+.header .login-form{
+    position: absolute;
+    top: 110%; right: -110%;
+    width: 30rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    /* z-index: 1002; */
+    box-shadow: 0 4px 8px rgba(4,171,207,0.1);
+}
+/* pour activer le formulaire de connexion */
+.header .login-form.active{
+    right: 9%; 
+    transition: .4s linear;
+}
+
+.header .login-form h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    /* border-bottom: 1px solid #ddd; */
+}
+/* champ email et password */
+.header .login-form .box{
+    width: 100%;
+    margin: 0.5rem 0;
+    border-radius: 0.3em;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000;
+    transition: border-color 0.3s ease;
+} 
+
+/* pour transformer le border lorsqu'on clique dans le champ */
+.login-form .box:focus {
+    border-color: #04abcf; 
+    outline: none; 
+}
+.header .login-form p {
+    font-size: 16px;
+    padding: .5rem 0;
+    color: #000;
+}
+.header .login-form a{
+    color:#04abcf;
+}
+
+/* pour la partie souviens toi de moi */
+.header .login-form .remember{
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+.header .login-form .remember a{
+    margin-left: 15px;
+}
+.header .login-form .remember .checbox{
+    display: flex;
+    justify-content:center;
+}
+/* boutton se connecter */
+
+.header .login-form .btn{
+    background-color: #04abcf;
+    width: 100%;
+    border: none;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+
+}
+
+.header .login-form .btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.header .login-form .box.active{
+    border: 1px solid #04abcf;
+}
+
+
+@media screen and (min-width: 992px) and (max-width:1300px) {
+    .header{
+        padding: 0.5rem;
+        
+    }
+
+    .header .navbar a {
+
+        font-size: 16px;
+       
+    }
+
+    .header .logo img{
+        width:50px;
+        height: 50px;
+    }
+
+    .header .icons div {
+        font-size: 20px;
+       
+    }
+
+    .header .navbar a strong{
+        margin-left: 3px;
+        font-size: 1rem;
+        color: #f6f649;
+    }
+    
+    .header .search-form{
+        right:20%; top: -110%;
+        width: 70%;
+        height: 2.5rem;
+        border-radius: 0.3rem;
+    }
+    .header .search-form input{
+        font-size: 1rem;
+        color: #fff;
+        padding:0 1rem;
+    }
+
+    .header .search-form label{
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .header .login-form.active{
+        right: 3%; 
+        transition: .4s linear;
+    }
+}
+
+
+@media screen and (min-width: 449px)and (max-width:991px) {
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 110%; right: -110%;
+        width: 30rem;
+        border-radius: 0.5rem;
+        /* border: 1px solid #ddd; */
+        background-color: #000;
+    }
+
+    .header .navbar.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        margin: 0.5rem 2.5rem;
+        display: block;
+    }
+
+    .header .search-form {
+        position: absolute; /* Position fixe pour rester en bas même en défilant */
+        /* Positionné en bas de la fenêtre */
+        left: 5%;
+        right: 5%;
+        width: 90%; /* Prend toute la largeur de l'écran */
+        border-radius: 0.5rem; /* Arrondir uniquement le haut */
+        background-color: #fff; /* Fond noir */
+        border: 1px solid #ddd;
+        z-index: 1001; /* Assure que le formulaire est au-dessus des autres éléments */
+        display: flex; /* Assure que le contenu reste en ligne */
+        margin: 0; 
+        padding: 0;
+    }
+
+    .header .search-form input{
+        font-size: 1rem;
+        color: #000;
+        padding:0 1rem;
+    }
+
+    .header .search-form label{
+        color: #000;
+        font-size: 14px;
+    }
+/* 
+    .header .search-form{
+        width: 35rem;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+        right:-110%; 
+        top:110%;
+    } */
+    .header .search-form.active{
+        right: 9%;
+        transition: .4s linear;
+    
+    }
+
+    .header .login-form.active{
+        right: 2rem; 
+        transition: .4s linear;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 450px){
+    #menu-btn{
+        display: inline-block;
+    }
+    /*menu de navigation*/
+    .header{
+        padding: 0.1rem;
+        
+    }
+    .header .navbar{
+        position: absolute;
+        top: 110%; right: -140%;
+        width: 95%;
+        border-radius: 0.5rem;
+        /* border: 1px solid #ddd; */
+        background-color: #000;
+    }
+
+    .header .navbar.active{
+        right: 0.5rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a {
+        font-size: 1.5rem;
+        margin: 0.5rem 3rem;
+        display: block;
+    }
+
+    .header .icons div {
+        font-size: 16px;
+       
+    }
+    /*formulaire de connexion*/
+
+    .header .login-form{
+        top: 110%; right: -110%;
+        width: 95%;
+        padding: 5px;
+    }
+
+    .header .login-form h3{
+        font-size: 16px;
+    }
+
+    .header .login-form .box{
+        width: 80%;
+        margin: 0.5rem 0;
+        border-radius: 0.3em;
+        padding: 0.5rem;
+        font-size: 12px;
+        
+    } 
+
+    .header .login-form p {
+        font-size: 12px;
+        padding: .3rem 0;
+        color: #000;
+    }
+
+    .header .login-form .remember{
+        margin: 0.3rem 0;
+        font-size:10px;
+        text-align: center;
+    }
+
+    .header .login-form a{
+        font-size: 12px;
+    }
+    .header .login-form .remember a{
+        font-size: 10px;
+    }
+
+    .header .login-form .btn{
+        background-color: #04abcf;
+        width: 80%;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
+    
+    }
+
+    .header .login-form.active{
+        right: 0.5rem; 
+        transition: .4s linear;
+    }
+    /*formulaire de recherche*/
+    .header .search-form {
+        position: absolute; /* Position fixe pour rester en bas même en défilant */
+        /* Positionné en bas de la fenêtre */
+        left: 5%;
+        right: 5%;
+        width: 90%; /* Prend toute la largeur de l'écran */
+        border-radius: 0.3rem; /* Arrondir uniquement le haut */
+        background-color: #fff; /* Fond noir */
+        border: 1px solid #ddd;
+        z-index: 1001; /* Assure que le formulaire est au-dessus des autres éléments */
+        display: flex; /* Assure que le contenu reste en ligne */
+        margin: 0; 
+        padding: 0;
+        height: 2.5rem;
+    }
+
+    .header .search-form input{
+        font-size: 1rem;
+        color: #000;
+        padding:0 1rem;
+    }
+
+    .header .search-form label{
+        color: #000;
+        font-size: 14px;
+    }
+    .header .search-form.active{
+        right: 9%;
+        transition: .4s linear;
+    
+    }
+}
+/*fin menu css*/
+/* debut cover*/
+.cover {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.button{
+    position: absolute;
+    bottom: -2%; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; 
+}
+.button .btn{
+    background-color: #04abcf;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* fin cover */
+/* SERVICE */
+.title-container {
+    padding-bottom: 2rem;
+}
+
+.underline-title {
+    display: inline-block; /* Pour que l'élément soit de la largeur du texte uniquement */
+    position: relative; /* Nécessaire pour positionner le pseudo-élément ::after */
+    font-weight: bold; /* Rendre le texte en gras */
+    text-align: center !important;
+    margin: 0 auto;
+}
+
+.underline-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    bottom: -5px; /* Ajuste cet espace pour placer la ligne juste sous le texte */
+    width: 100%;
+    height: 7px; /* Épaisseur de la ligne */
+    background-color: #f6f649; 
+    border-radius: 5px; /* Ajoute un léger arrondi aux coins de la ligne */
+}
+
+
+.bouton .btn{
+    background-color: #04abcf;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*footer*/
+/*section des termes de confidentialité*/
+.confident{
+    border-right: 1px solid #ddd;
+    padding: 2em;
+}
+.confident i {
+    font-size: 24px;
+    color:#04abcf;
+}
+.confident a{
+    text-decoration: none;
+    color: #000;
+}
+
+.terme{
+    border-right: 1px solid #ddd;
+    padding: 2em;
+}
+
+.terme i{
+    font-size: 24px;
+    color: #04abcf;
+}
+
+.terme a{
+    text-decoration: none;
+    color: #000;
+}
+
+.retour{
+    padding: 2em;
+}
+.retour i {
+    font-size: 24px;
+    color: #04abcf;
+}
+.retour a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*section contenu*/
+
+.social a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5em;
+}
+
+.social a:hover{
+    color: #f6f649;
+    
+}
+
+.link{
+    
+    color: #fff;
+}
+.link h4{
+    text-decoration: underline;
+}
+.link a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.link a:hover{
+    color: #f6f649;
+    } 
+
+.contact{
+    color: #fff;
+}
+.contact h4{
+    text-decoration: underline;
+}
+.last-footer-contain{
+    padding: 2em;
+    /* border-bottom: 1px solid #ddd; */
+
+}
+/* end footer */
+
+@media screen and (min-width:200px) and (max-width: 450px) {
+
+    /* général */
+    h2{
+        font-size: 28px;
+    }
+
+    /* a propos */
+
+    .button{
+        bottom: -6%; 
+        
+    }
+    
+    .button .btn{
+        font-size: 12px;
+    }
+    .presentation{
+        text-align: justify;
+    }
+
+
+    /* footer */
+    .last-footer-contain{
+        border-bottom: 1px solid #ddd;
+    }
+
+    .confident{
+        border-right:none;
+        
+    }
+    .terme{
+        border-right: none;
+        text-align: center;
+    }
+
+    
+    
+   
+}
+@media screen and (min-width:451px) and (max-width: 768px) {
+    /* général */
+    h2{
+        font-size: 28px;
+    }
+    
+    /* a propos */
+    .button{
+        bottom: -5%; 
+        
+    }
+    .presentation{
+        text-align: justify;
+    }
+    
+    /* footer */
+    .last-footer-contain{
+        border-bottom: 1px solid #ddd;
+    }
+    .confident{
+        border-right:none;
+        
+    }
+    .terme{
+        border-right: none;
+        text-align: center;
+    }
+
+   
+}
+
+@media screen and (min-width:769px) and (max-width: 1120px) {
+    /* général */
+    h2{
+        font-size: 28px;
+    }
+    
+    /* a propos */
+    .button{
+        bottom: -5%; 
+        
+    }
+    .presentation{
+        text-align: justify;
+    }
+    
+    /* footer */
+    .last-footer-contain{
+        border-bottom: 1px solid #ddd;
+    }
+    .confident{
+        border-right:none;
+        
+    }
+    .terme{
+        border-right: none;
+        text-align: center;
+    }
+
+   
+    
+}

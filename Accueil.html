@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kid-info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Accueil.css">
+    <!-- <link rel="stylesheet" href="menu.css"> -->
+</head>
+<body>
+    <header class="header">
+        <!-- le logo du site -->
+        <a href="#" class="logo"><img src="image/logo_kid.jpg" alt="logo de l'entreprise"></a>
+        <!-- les éléments du menu -->
+        <nav class="navbar">
+            <a href="#" style="color: #f6f649;">accueil<strong>.</strong></a>
+            <a href="about.html">A PROPOS<strong>.</strong></a>
+            <a href="produit.html">PRODUITS<strong>.</strong></a>
+            <a href="service.html">SERVICES<strong>.</strong></a>
+            <a href="#">AGENCES<strong>.</strong></a>
+            <a href="#">CONTACTS ET FAQ<strong>.</strong></a>  
+        </nav>
+        <!-- les icones du menu -->
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+        <!-- le formulaire qui apparait lorsqu'on clique sur l'icone de recherche -->
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="Entrer votre recherche ici...">
+            <label for="search-box" class="fas fa-times-circle" id="close"></label>
+        </form>
+        <!-- le formulaire de connexion -->
+        <form action="" class="login-form">
+            <h3>Se connecter</h3>
+            <input type="email" placeholder="Entrer votre email" class="box">
+            <input type="password" placeholder="Entrer votre mot de passe " class="box">
+            <div class="remember">
+                <div class="checbox">
+                    <input type="checkbox" placeholder="Se souvenir de moi" id="check-box">
+                    <label for="check-box" style="margin-left: 5px;">Se souvenir de moi</label>
+                </div>
+                <a href="#">mot de passe oublié ?</a>
+            </div>
+            <button class="btn">Se connecter</button>
+            <p>Vous n'avez pas de compte ?</p>
+            <a href="#">S'inscrire maintenant.</a>
+        </form>
+    </header>
+<main>
+    <!-- le carousel de la page -->
+    <section class="py-3">
+        <!-- <div class="promo">
+            <h1>Profiter des offres canal+</h1>
+            <p>un mois acheté, un mois offert</p>
+            <button class="btn fw-bold text-uppercased">REABONNEZ-VOUS</button>
+        </div> -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-intervall="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/tv.jpg" class="d-block w-100" alt="illustration">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/tv2.jpg" class="d-block w-100" alt="illustration">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/tv3.jpg" class="d-block w-100" alt="illustration">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+      
+        
+    </section>
+    <!-- les produits  -->
+    <section class="py-3 mt-4">
+        <div class="container ">
+            <div class="title-container text-center">
+                <h2 class="fw-bold underline-title">NOS PRODUITS</h2>
+            </div>
+            <p class="text-center mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                 Placeat sint adipisci illum accusantium ex. Ipsa repudiandae minima sint, minus repellat quaerat mollitia
+                 eligendi iusto cupiditate reprehenderit eos voluptatum, sit id.</p>
+            <div class="d-flex justify-content-center">
+                <button class="btn bouton fw-bold text-uppercase">COMMENCER VOS ACHATS</button>
+            </div>
+            <div class="row gx-5 mt-4">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3  mb-2">
+                    <div class="produit card">
+                        <img src="image/decodeur.jpg" alt="decodeur" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: bold;">Décodeur</h5>
+                            <p class="card-text" style="font-size:13px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda</p>
+                            <p class="card-text" style="font-size:14px;"><strong>5000</strong> FCFA/mois</p>
+                            <button class="btn fw-bold text-uppercased">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3  mb-2">
+                    <div class="produit card">
+                        <img src="image/decodeur.jpg" alt="kit" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: bold;">Télécommande</h5>
+                            <p class="card-text" style="font-size:13px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda</p>
+                            <p class="card-text" style="font-size:14px;"><strong>1000</strong> FCFA/mois</p>
+                            <button class="btn fw-bold text-uppercased">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3  mb-2">
+                    <div class="produit card">
+                        <img src="image/decodeur.jpg" alt="kit" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: bold;">Transformateur</h5>
+                            <p class="card-text" style="font-size:13px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda</p>
+                            <p class="card-text" style="font-size:14px;"><strong>1000</strong> FCFA/mois</p>
+                            <button class="btn fw-bold text-uppercased">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3  mb-2">
+                    <div class="produit card">
+                        <img src="image/decodeur.jpg" alt="parabole" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-weight: bold;">Parabole</h5>
+                            <p class="card-text" style="font-size:13px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda</p>
+                            <p class="card-text" style="font-size:14px;"><strong>5000</strong> FCFA/mois</p>
+                            <button class="btn fw-bold text-uppercased">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+    </section>
+    <!-- les différents services -->
+    <section class="py-4 mt-4" style="background-color: #fafafa;">
+        <div class="title-container text-center">
+            <h2 class="fw-bold underline-title">NOS SERVICES</h2>
+        </div>
+        <div class="container">
+            <div class="row gy-4 mt-3">
+                <div class="col-sm-12 col-md-6 mb-3 mb-sm-0">
+                  <div class="card">
+                    <div class="card-body-1">
+                      <div class="d-flex align-items-center">
+                        <div class="d-inline-flex justify-content-center align-items-center text-white rounded-circle" style="width:50px; height:50px; background-color:#04abcf">
+                            <i class="fas fa-tag"></i>
+                          </div>
+                          <h3 class="card-title md-4 ms-3 offset-md-1">vente</h3>
+                        </div>
+                        <a href="#" class="btn-primary fw-bold">Voir plus</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6 mb-3 mb-sm-0">
+                    <div class="card">
+                      <div class="card-body-1">
+                        <div class="d-flex align-items-center">
+                          <div class="d-inline-flex justify-content-center align-items-center text-white rounded-circle" style="width:50px; height:50px; background-color:#04abcf">
+                              <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <h3 class="card-title md-4 ms-3 offset-md-1">abonnement</h3>
+                        </div>
+                        <a href="#" class="btn-primary fw-bold">Voir plus</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4 mt-2">
+                <div class="col-sm-12 col-md-6 mb-3 mb-sm-0">
+                  <div class="card">
+                    <div class="card-body-1">
+                      <div class="d-flex align-items-center ">
+                        <div class="d-inline-flex justify-content-center align-items-center text-white rounded-circle" style="width:50px; height:50px; background-color:#04abcf">
+                            <i class="fas fa-wrench"></i>
+                          </div>
+                          <h3 class="card-title md-4 ms-3 offset-md-1">installation</h3>
+                        </div>
+                        <a href="#" class="btn-primary fw-bold">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 mb-3 mb-sm-0">
+                    <div class="card">
+                      <div class="card-body-1">
+                        <div class="d-flex align-items-center">
+                          <div class="d-inline-flex justify-content-center align-items-center text-white rounded-circle" style="width:50px; height:50px; background-color:#04abcf">
+                              <i class="fas fa-cog"></i>
+                            </div>
+                            <h3 class="card-title md-4 ms-3 offset-md-1">depannage</h3>
+                        </div>
+                        <a href="#" class="btn-primary fw-bold">Voir plus</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- présentation de boutique -->
+    <section class="py-3 mt-4">
+        <div class="container">
+            <div class="title-container text-center">
+                <h2 class="fw-bold underline-title mb-4">NOS AGENCES</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Enim excepturi, facere suscipit dolores laudantium maiores perspiciatis!
+                    Nam, atque libero laborum beatae quam consequatur neque? Maxime et excepturi 
+                    quis incidunt qui!</p>
+            </div>
+            <div class="row gx-5 mt-4">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="produit card">
+                        <img src="image/boutique.jpg" alt="formule_canal+" class="card-img-top" style="width: 100%; height: 300px;">
+                        <div class="card-body-2">
+                            <h3><a href="#">KID INFO EXCELLENCE</a></h3>
+                            <p style="font-size: 16px;">Yopougon Saint André</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="produit card">
+                        <img src="image/boutique.jpg" alt="formule_canal+" class="card-img-top" style="width: 100%; height: 300px;">
+                        <div class="card-body-2">
+                            <h3><a href="#">KID INFO EXCELLENCE</a></h3>
+                            <p style="font-size: 16px;">Yopougon Saint André</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="produit card">
+                        <img src="image/boutique.jpg" alt="formule_canal+" class="card-img-top" style="width: 100%; height: 300px;">
+                        <div class="card-body-2">
+                            <h3><a href="#">KID INFO EXCELLENCE</a></h3>
+                            <p style="font-size: 16px;">Yopougon Saint André</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="produit card">
+                        <img src="image/boutique.jpg" alt="formule_canal+" class="card-img-top" style="width: 100%; height: 300px;">
+                        <div class="card-body-2">
+                            <h3><a href="#">KID INFO EXCELLENCE</a></h3>
+                            <p style="font-size: 16px;">Yopougon Saint André</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="produit card">
+                        <img src="image/boutique.jpg" alt="formule_canal+" class="card-img-top" style="width: 100%; height: 300px;">
+                        <div class="card-body-2">
+                            <h3><a href="#">KID INFO EXCELLENCE</a></h3>
+                            <p style="font-size: 16px;">Yopougon Saint André</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="produit card">
+                        <img src="image/boutique.jpg" alt="formule_canal+" class="card-img-top" style="width: 100%; height: 300px;">
+                        <div class="card-body-2">
+                            <h3><a href="#">KID INFO EXCELLENCE</a></h3>
+                            <p style="font-size: 16px;">Yopougon Saint André</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+       
+        <!-- <div class="container">
+            <div class="title-container text-center">
+                <h2 class="fw-bold text-uppercased underline-title">NOS AGENCES</h2>
+            </div>
+            <div class="row gy-4 mt-4">
+                <div class="col-4 col-md-6 shop">
+                    <h3 class="fw-bold">Pour un service de qualité rendez-vous dans nos boutiques</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Incidunt numquam cupiditate facere autem provident, fuga 
+                        in exercitationem. Id nobis necessitatibus voluptatum totam 
+                        commodi corrupti obcaecati nisi assumenda temporibus, corporis 
+                        repellendus!</p>
+                    <button class="btn fw-bold text-uppercased mt-4">VISITEZ-NOUS</button>
+                </div>
+                <div class="col-8 col-md-4">
+                    <div class="col-lg-4">
+                        <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-right"
+                            data-aos-duration="800">
+                            <div class="post-content text-sm-right">
+                                <h3><a href="#">KID INFO EXCELLENCE</a></h3>
+                                <p>Yopougon Saint André</p>
+                            </div>
+                            <div class="post-thumb">
+                                <img class="img-fluid" src="image/boutique.jpg" alt="excellence">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-left" data-aos-duration="800">
+                            <div class="post-thumb">
+                                <img class="img-fluid" src="image/boutique.jpg" alt="Yopougon Figayo">
+                            </div>
+                            <div class="post-content">
+                                <h3><a href="#">KID INFO VISION+ NUMERIQUE</a></h3>
+                                <p>Yopougon, en face du terrain Figayo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-right"
+                            data-aos-duration="800">
+                            <div class="post-content text-sm-right">
+                                <h3><a href="#">KID INFO EXCELLENCE</a></h3>
+                                <p>Yopougon Saint André</p>
+                            </div>
+                            <div class="post-thumb">
+                                <img class="img-fluid" src="image/boutique.jpg" alt="excellence">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-left" data-aos-duration="800">
+                            <div class="post-thumb">
+                                <img class="img-fluid" src="image/boutique.jpg" alt="Yopougon Figayo">
+                            </div>
+                            <div class="post-content">
+                                <h3><a href="#">KID INFO VISION+ NUMERIQUE</a></h3>
+                                <p>Yopougon, en face du terrain Figayo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-right" data-aos-delay="200"
+                            data-aos-duration="800">
+                            <div class="post-content text-sm-right">
+                                <h3><a href="#">KID INFO ATTECOUBE</a></h3>  
+                                <p>Attecoube, non loin de boulangerie GZ LA PAIX, non loin pharmacie SERBROKO</p>
+                            </div>
+                            <div class="post-thumb">
+                                <img class="img-fluid" src="image/boutique.jpg" alt="kid-info-Attecoube">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-left" data-aos-delay="200"
+                            data-aos-duration="800">
+                            <div class="post-thumb">
+                                <img class="img-fluid" src="image/boutique.jpg" alt="kid-info-Agban">
+                            </div>
+                            <div class="post-content">
+                                <h3><a href="#">KID INFO AGBAN</a></h3>  
+                                <p>Attecoube Agban, au sein de la station ola energy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="image/boutique.jpg" alt="boutique_kid" width="100%">
+                </div>      
+            </div>
+            </div>
+          </div> -->
+    </section>
+  
+    <!-- formule de canal+ -->
+    <section class="py-3" style="background-color: #fafafa;">
+        <div class="container">
+            <div class="title-container text-center">
+                <h2 class="fw-bold underline-title">CHOISISSEZ VOS FORMULES </h2>
+            </div>     
+            <!-- <div class="title-container text-center mt-2">
+                <h2 class="fw-bold underline-title">FORMULES</h2>
+            </div>      -->
+            
+           <div class="row gx-5 mt-4">
+               <div class="col-12 col-md-6 col-lg-4 mb-4">
+                   <div class="produit card">
+                       <div class="card-body-2">
+                           <h4 class="card-title">Accès</h4>
+                           <p class="card-text">Plus de 250 chaînes, radio et service</p>
+                           <img src="image/access.png" alt="formule_canal+" class="card-img-top" width="100%">
+                           <p class="card-text"><strong>5000</strong> FCFA/mois</p>
+                           <button class="btn fw-bold text-uppercased">SE REABONNER</button>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="produit card">
+                        <div class="card-body-2">
+                            <h4 class="card-title">Accès</h4>
+                            <p class="card-text">Plus de 250 chaînes, radio et service</p>
+                            <img src="image/access.png" alt="formule_canal+" class="card-img-top" width="100%">
+                            <p class="card-text"><strong>5000</strong> FCFA/mois</p>
+                            <button class="btn fw-bold text-uppercased">SE REABONNER</button>
+                        </div>
+                    </div>
+               </div>
+               <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="produit card">
+                        <div class="card-body-2">
+                            <h4 class="card-title">Accès</h4>
+                            <p class="card-text">Plus de 250 chaînes, radio et service</p>
+                            <img src="image/access.png" alt="formule_canal+" class="card-img-top" width="100%">
+                            <p class="card-text"><strong>5000</strong> FCFA/mois</p>
+                            <button class="btn fw-bold text-uppercased">SE REABONNER</button>
+                        </div>
+                    </div>
+               </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="produit card">
+                        <div class="card-body-2">
+                            <h4 class="card-title">Accès</h4>
+                            <p class="card-text">Plus de 250 chaînes, radio et service</p>
+                            <img src="image/access.png" alt="formule_canal+" class="card-img-top" width="100%">
+                            <p class="card-text"><strong>5000</strong> FCFA/mois</p>
+                            <button class="btn fw-bold text-uppercased">SE REABONNER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="produit card">
+                        <div class="card-body-2">
+                            <h4 class="card-title">Accès</h4>
+                            <p class="card-text">Plus de 250 chaînes, radio et service</p>
+                            <img src="image/access.png" alt="formule_canal+" class="card-img-top" width="100%">
+                            <p class="card-text"><strong>5000</strong> FCFA/mois</p>
+                            <button class="btn fw-bold text-uppercased">SE REABONNER</button>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+   
+</main>
+<footer class="border-top">
+    <section class="py-3 bg-light">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-12 col-md-4 confident">
+                    <i class="fas fa-shield-alt d-flex align-items-center justify-content-center"></i>
+                    <a href="#"><h4 class="fw-bold d-flex justify-content-center mt-3">Condition d'utilisation</h4></a>
+                </div>
+                <div class="col-12 col-md-4 terme">
+                    <i class="fas fa-lock d-flex align-items-center justify-content-center "></i>
+                    <a href="#"><h4 class="fw-bold d-flex justify-content-center mt-3">Termes de confidentialité</h4></a>
+                </div>
+                <div class="col-12 col-md-4 retour">
+                    <i class="fas fa-file-contract d-flex align-items-center justify-content-center"></i>
+                    <a href="#"><h4 class="fw-bold d-flex justify-content-center mt-3">Politique de retour</h4></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-3 bg-dark">
+        <div class="container last-footer-contain">
+            <div class="row gy-4 p-2">
+                <div class="col-12 col-md-4 present">
+                    <img src="image/logo_kid.jpg" alt="le logo" width="10%">
+                    <p class="fw-bold mt-2" style="color:#fff;">Distributeur agrée canal+</p>
+                    <div class="social">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 d-flex flex-column link">
+                    <h4 class="fw-bold">Liens</h4>
+                    <a href="#">A propos</a>
+                    <a href="#">Services</a>
+                    <a href="#">Boutiques</a>
+                    <a href="#">Produits</a>
+                    <a href="#">Contact et FAQ</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex flex-column contact">
+                    <h4 class="fw-bold">Contacts</h4>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-phone-alt"></i>
+                        <p class="fw-bold ms-2 mb-0">+225 xxxxxxxx</p>
+                    </div>  
+                    <div class="d-flex align-items-center mt-3">
+                        <i class="fas fa-envelope"></i>
+                        <p class="fw-bold ms-2 mb-0">kidinfo@gmail.com</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p class="fw-bold ms-2 mb-0">Yopougon st André</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="py-3 bg-dark">
+        <div class="container">
+            <p class="d-flex align-items-center justify-content-center" style="color: #fff;">&copy;2024 conçu par FIRME ATTOU&CO</p>
+        </div>
+    </section>
+        
+
+</footer>
+<script src="menu.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="multipurpose/assets/js/jquery-3.3.1.js"></script>
+<!--Plugins-->
+<script src="multipurpose/assets/js/bootstrap.bundle.js"></script>
+<script src="multipurpose/assets/js/loaders.css.js"></script>
+<script src="multipurpose/assets/js/aos.js"></script>
+<script src="multipurpose/assets/js/swiper.min.js"></script>
+<script src="multipurpose/assets/js/lightgallery-all.min.js"></script>
+<!--Template Script-->
+<script src="multipurpose/assets/js/main.js"></script>
+</body>
+</html>

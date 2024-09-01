@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KId info</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- lien css -->
+     <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+<!-- debut du header -->
+<header class="header">
+    <!-- le logo du site -->
+    <a href="#" class="logo"><img src="image/logo_kid.jpg" alt="logo de l'entreprise"></a>
+    <!-- les éléments du menu -->
+    <nav class="navbar">
+        <a href="#">accueil<strong>.</strong></a>
+        <a href="#">A PROPOS<strong>.</strong></a>
+        <a href="#">PRODUITS<strong>.</strong></a>
+        <a href="#">SERVICES<strong>.</strong></a>
+        <a href="#">AGENCES<strong>.</strong></a>
+        <a href="#">CONTACTS ET FAQ<strong>.</strong></a>  
+    </nav>
+    <!-- les icones du menu -->
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+    <!-- le formulaire qui apparait lorsqu'on clique sur l'icone de recherche -->
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="Entrer votre recherche ici...">
+        <label for="search-box" class="fas fa-times-circle" id="close"></label>
+    </form>
+    <!-- le formulaire de connexion -->
+    <form action="" class="login-form">
+        <h3>Se connecter</h3>
+        <input type="email" placeholder="Entrer votre email" class="box">
+        <input type="password" placeholder="Entrer votre mot de passe " class="box">
+        <div class="remember">
+            <div class="checbox">
+                <input type="checkbox" placeholder="Se souvenir de moi" id="check-box">
+                <label for="check-box" style="margin-left: 5px;">Se souvenir de moi</label>
+            </div>
+            <a href="#">mot de passe oublié ?</a>
+        </div>
+        <button class="btn">Se connecter</button>
+        <p>Vous n'avez pas de compte ?</p>
+        <a href="#">S'inscrire maintenant.</a>
+    </form>
+</header>
+<!-- fin du header -->
+
+<script src="menu.js"></script>
+</body>
+</html>

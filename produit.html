@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>kid-info</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="produit.css">
+</head>
+<body>
+<header class="header">
+        <!-- le logo du site -->
+        <a href="#" class="logo"><img src="image/logo_kid.jpg" alt="logo de l'entreprise"></a>
+        <!-- les éléments du menu -->
+        <nav class="navbar">
+            <a href="Accueil.html">accueil<strong>.</strong></a>
+            <a href="about.html">A PROPOS<strong>.</strong></a>
+            <a href="#" style="color: #f6f649;">PRODUITS<strong>.</strong></a>
+            <a href="service.html">SERVICES<strong>.</strong></a>
+            <a href="#">AGENCES<strong>.</strong></a>
+            <a href="#">CONTACTS ET FAQ<strong>.</strong></a>  
+        </nav>
+        <!-- les icones du menu -->
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+        <!-- le formulaire qui apparait lorsqu'on clique sur l'icone de recherche -->
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="Entrer votre recherche ici...">
+            <label for="search-box" class="fas fa-times-circle" id="close"></label>
+        </form>
+        <!-- le formulaire de connexion -->
+        <form action="" class="login-form">
+            <h3>Se connecter</h3>
+            <input type="email" placeholder="Entrer votre email" class="box">
+            <input type="password" placeholder="Entrer votre mot de passe " class="box">
+            <div class="remember">
+                <div class="checbox">
+                    <input type="checkbox" placeholder="Se souvenir de moi" id="check-box">
+                    <label for="check-box" style="margin-left: 5px;">Se souvenir de moi</label>
+                </div>
+                <a href="#">mot de passe oublié ?</a>
+            </div>
+            <button class="btn">Se connecter</button>
+            <p>Vous n'avez pas de compte ?</p>
+            <a href="#">S'inscrire maintenant.</a>
+        </form>
+</header>
+<main>
+    <!-- cover -->
+    <section class="py-3">
+        <div class="cover position-relative">
+            <img src="image/tv2.jpg" alt="image de couverture" class="w-100">
+            <div class="button position-absolute">
+                <button class="btn fw-bold text-uppercase">Nos produits</button>
+            </div>
+        </div>
+        
+    </section>
+    <!-- contenu produit -->
+    <section class="py-3">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3  mb-2">
+                    <div class="produit card">
+                        <a href="detail-produit.html"><img src="image/decodeur.jpg" alt="decodeur" class="card-img-top" width="100%"></a>
+                        <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Decodeur</h5>
+                        <p class="card-text" style="font-size:13px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda</p>
+                        <p class="card-text" style="font-size:14px;"><strong>1000</strong> FCFA/mois</p>
+                        <button class="btn fw-bold text-uppercased">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3  mb-2">
+                    <div class="produit card">
+                        <a href="detail-produit.html"><img src="image/decodeur.jpg" alt="decodeur" class="card-img-top" width="100%"></a>
+                        <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Télécommande</h5>
+                        <p class="card-text" style="font-size:13px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda</p>
+                        <p class="card-text" style="font-size:14px;"><strong>1000</strong> FCFA/mois</p>
+                        <button class="btn fw-bold text-uppercased">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3  mb-2">
+                    <div class="produit card">
+                        <a href="detail-produit.html"><img src="image/decodeur.jpg" alt="decodeur" class="card-img-top" width="100%"></a>
+                        <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Parabole</h5>
+                        <p class="card-text" style="font-size:13px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda</p>
+                        <p class="card-text" style="font-size:14px;"><strong>1000</strong> FCFA/mois</p>
+                        <button class="btn fw-bold text-uppercased">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3  mb-2">
+                    <div class="produit card">
+                        <a href="detail-produit.html"><img src="image/decodeur.jpg" alt="decodeur" class="card-img-top" width="100%"></a>
+                        <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Transformateur</h5>
+                        <p class="card-text" style="font-size:13px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda</p>
+                        <p class="card-text" style="font-size:14px;"><strong>1000</strong> FCFA/mois</p>
+                        <button class="btn fw-bold text-uppercased">ACHETER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="border-top">
+    <section class="py-3 bg-light">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-12 col-md-4 confident">
+                    <i class="fas fa-shield-alt d-flex align-items-center justify-content-center"></i>
+                    <a href="#"><h4 class="fw-bold d-flex justify-content-center mt-3">Condition d'utilisation</h4></a>
+                </div>
+                <div class="col-12 col-md-4 terme">
+                    <i class="fas fa-lock d-flex align-items-center justify-content-center "></i>
+                    <a href="#"><h4 class="fw-bold d-flex justify-content-center mt-3">Termes de confidentialité</h4></a>
+                </div>
+                <div class="col-12 col-md-4 retour">
+                    <i class="fas fa-file-contract d-flex align-items-center justify-content-center"></i>
+                    <a href="#"><h4 class="fw-bold d-flex justify-content-center mt-3">Politique de retour</h4></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-3 bg-dark">
+        <div class="container last-footer-contain">
+            <div class="row gy-4 p-2">
+                <div class="col-12 col-md-4 present">
+                    <img src="image/logo_kid.jpg" alt="le logo" width="10%">
+                    <p class="fw-bold mt-2" style="color:#fff;">Distributeur agrée canal+</p>
+                    <div class="social">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 d-flex flex-column link">
+                    <h4 class="fw-bold">Liens</h4>
+                    <a href="#">A propos</a>
+                    <a href="#">Services</a>
+                    <a href="#">Boutiques</a>
+                    <a href="#">Produits</a>
+                    <a href="#">Contact et FAQ</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex flex-column contact">
+                    <h4 class="fw-bold">Contacts</h4>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-phone-alt"></i>
+                        <p class="fw-bold ms-2 mb-0">+225 xxxxxxxx</p>
+                    </div>  
+                    <div class="d-flex align-items-center mt-3">
+                        <i class="fas fa-envelope"></i>
+                        <p class="fw-bold ms-2 mb-0">kidinfo@gmail.com</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p class="fw-bold ms-2 mb-0">Yopougon st André</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="py-3 bg-dark">
+        <div class="container">
+            <p class="d-flex align-items-center justify-content-center" style="color: #fff;">&copy;2024 conçu par FIRME ATTOU&CO</p>
+        </div>
+    </section>
+        
+
+</footer>
+<script src="menu.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
